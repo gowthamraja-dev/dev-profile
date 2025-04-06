@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/dev-profile/static/css/main.7e050996.css",
-    "main.js": "/dev-profile/static/js/main.aaa76b3a.js",
+    "main.css": "/dev-profile/static/css/main.3896a722.css",
+    "main.js": "/dev-profile/static/js/main.1d01e061.js",
     "static/js/453.1efd5af0.chunk.js": "/dev-profile/static/js/453.1efd5af0.chunk.js",
+    "static/media/gowthamLogo.png": "/dev-profile/static/media/gowthamLogo.f36b72260154c3ed2441.png",
     "index.html": "/dev-profile/index.html",
-    "main.7e050996.css.map": "/dev-profile/static/css/main.7e050996.css.map",
-    "main.aaa76b3a.js.map": "/dev-profile/static/js/main.aaa76b3a.js.map",
+    "main.3896a722.css.map": "/dev-profile/static/css/main.3896a722.css.map",
+    "main.1d01e061.js.map": "/dev-profile/static/js/main.1d01e061.js.map",
     "453.1efd5af0.chunk.js.map": "/dev-profile/static/js/453.1efd5af0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7e050996.css",
-    "static/js/main.aaa76b3a.js"
+    "static/css/main.3896a722.css",
+    "static/js/main.1d01e061.js"
   ]
 }
