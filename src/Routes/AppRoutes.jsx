@@ -1,12 +1,18 @@
-import React from "react";
+import React, { lazy } from "react";
+import { Route, Routes } from "react-router-dom";
+
 import BaseLayout from "../Layout/BaseLayout";
-import Home from "../Features/Home";
+import { Paths } from "./path";
+
+const Login = lazy(() => import("../Features/SignIn/Login"));
 
 const AppRoutes = () => {
   return (
     <div>
       <BaseLayout>
-        <Home />
+        <Routes>
+          <Route path={Paths.HOME} element={<Login />} />
+        </Routes>
       </BaseLayout>
     </div>
   );

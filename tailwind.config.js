@@ -13,6 +13,7 @@ module.exports = {
         surface: "var(--color-surface)",
         muted: "var(--color-muted)",
         baseBackground: "var(--color-baseBackground)",
+        darkblue: "#033A85",
       },
       fontFamily: {
         sans: ["Inter", "ui-sans-serif", "system-ui"],
