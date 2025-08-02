@@ -1,16 +1,18 @@
 {
   "files": {
-    "main.css": "/dev-profile/static/css/main.3896a722.css",
-    "main.js": "/dev-profile/static/js/main.1d01e061.js",
-    "static/js/453.1efd5af0.chunk.js": "/dev-profile/static/js/453.1efd5af0.chunk.js",
-    "static/media/gowthamLogo.png": "/dev-profile/static/media/gowthamLogo.f36b72260154c3ed2441.png",
-    "index.html": "/dev-profile/index.html",
-    "main.3896a722.css.map": "/dev-profile/static/css/main.3896a722.css.map",
-    "main.1d01e061.js.map": "/dev-profile/static/js/main.1d01e061.js.map",
-    "453.1efd5af0.chunk.js.map": "/dev-profile/static/js/453.1efd5af0.chunk.js.map"
+    "main.css": "/static/css/main.0451127c.css",
+    "main.js": "/static/js/main.33fc258e.js",
+    "static/js/388.8767145c.chunk.js": "/static/js/388.8767145c.chunk.js",
+    "static/js/453.1efd5af0.chunk.js": "/static/js/453.1efd5af0.chunk.js",
+    "static/media/GLogo.png": "/static/media/GLogo.a6960fef2c797596f8e6.png",
+    "index.html": "/index.html",
+    "main.0451127c.css.map": "/static/css/main.0451127c.css.map",
+    "main.33fc258e.js.map": "/static/js/main.33fc258e.js.map",
+    "388.8767145c.chunk.js.map": "/static/js/388.8767145c.chunk.js.map",
+    "453.1efd5af0.chunk.js.map": "/static/js/453.1efd5af0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3896a722.css",
-    "static/js/main.1d01e061.js"
+    "static/css/main.0451127c.css",
+    "static/js/main.33fc258e.js"
   ]
 }
