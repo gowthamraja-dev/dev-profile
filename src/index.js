@@ -8,6 +8,9 @@ import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
 import { persistor, store } from "./app/store";
 
+if (window.location.pathname === "/dev-profile") {
+  window.location.href = "/";
+}
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Provider store={store}>
