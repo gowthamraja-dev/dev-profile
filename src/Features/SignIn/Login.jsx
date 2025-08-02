@@ -5,17 +5,18 @@ const Login = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const handleGoogleLogin = async () => {
-    setIsLoading(true);
-    try {
-      const response = await fetch(`${BASE_URL}/login/google`, {
-        credentials: "include",
-      });
-      const { auth_url } = await response.json();
-      window.location.href = auth_url;
-    } catch (error) {
-      console.error("Error initiating Google login:", error);
-      setIsLoading(false);
-    }
+    window.location.href = "#/login";
+    // setIsLoading(true);
+    // try {
+    //   const response = await fetch(`${BASE_URL}/login/google`, {
+    //     credentials: "include",
+    //   });
+    //   const { auth_url } = await response.json();
+    //   window.location.href = auth_url;
+    // } catch (error) {
+    //   console.error("Error initiating Google login:", error);
+    //   setIsLoading(false);
+    // }
   };
 
   return (
