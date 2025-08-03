@@ -2,9 +2,11 @@ import { useCallback, useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { BASE_URL } from "../../api/baseUrl";
 import { setUser } from "../../Data/Slice/loginSlice";
+import { useLocalStorage } from "../../app/hooks";
 
 const Dashboard = () => {
   const { user } = useSelector((s) => s.login);
+  const { set: setUserId } = useLocalStorage("userId");
   const [events, setEvents] = useState([]);
   const [newEvent, setNewEvent] = useState({
     summary: "",
@@ -118,6 +120,7 @@ const Dashboard = () => {
           credentials: "include",
           headers: { "X-User-ID": user?.user_id },
         });
+        setUserId(null);
         setUser(null);
       } catch (error) {
         console.error("Error logging out:", error);
@@ -151,6 +154,16 @@ const Dashboard = () => {
     }
   };
 
+  const { value: btn, set: setBtn, get: getBtn } = useLocalStorage("btn", "");
+  const get_btn = getBtn();
+
+  useEffect(() => {
+    console.log("Button text updated:", btn);
+  }, [btn]);
+
+  useEffect(() => {
+    console.log("Button text updated:", get_btn);
+  }, [get_btn]);
   return (
     <div className="px-4 sm:px-6 lg:px-8">
       <div className="flex flex-col sm:flex-row justify-between items-center mb-8">
@@ -163,6 +176,21 @@ const Dashboard = () => {
           className="mt-4 sm:mt-0 px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition duration-200"
         >
           Logout
+        </button>
+      </div>
+
+      <div className="flex space-x-4">
+        <button
+          className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-400 transition duration-200"
+          onClick={() => setBtn("Texting Button 1")}
+        >
+          button 1
+        </button>
+        <button
+          className="px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-400 transition duration-200"
+          onClick={() => setBtn("Texting Button 2")}
+        >
+          button 2
         </button>
       </div>
 

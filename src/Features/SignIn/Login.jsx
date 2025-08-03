@@ -1,24 +1,21 @@
 import { useState } from "react";
 import { BASE_URL } from "../../api/baseUrl";
-import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [isLoading, setIsLoading] = useState(false);
-  const navigate = useNavigate();
 
   const handleGoogleLogin = async () => {
-    navigate("/login");
-    // setIsLoading(true);
-    // try {
-    //   const response = await fetch(`${BASE_URL}/login/google`, {
-    //     credentials: "include",
-    //   });
-    //   const { auth_url } = await response.json();
-    //   window.location.href = auth_url;
-    // } catch (error) {
-    //   console.error("Error initiating Google login:", error);
-    //   setIsLoading(false);
-    // }
+    setIsLoading(true);
+    try {
+      const response = await fetch(`${BASE_URL}/login/google`, {
+        credentials: "include",
+      });
+      const { auth_url } = await response.json();
+      window.location.href = auth_url;
+    } catch (error) {
+      console.error("Error initiating Google login:", error);
+      setIsLoading(false);
+    }
   };
 
   return (
