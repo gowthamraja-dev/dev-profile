@@ -1,5 +1,5 @@
 import { BASE_URL } from "../api/baseUrl";
-import { navigateTo } from "../common/functions";
+import { navigateTo, replaceTo } from "../common/functions";
 import { setUser } from "../Data/Slice/loginSlice";
 import { Paths } from "../Routes/path";
 import { store } from "./store";

@@ -7,7 +7,7 @@ export const useLocalStorage = (key, initialValue = null) => {
 
   const set = useCallback(
     (newValue) => {
-      if (newValue === null || newValue === undefined) {
+      if (!newValue) {
         localStorage.removeItem(key);
         setValue(null);
       } else {
@@ -32,7 +32,17 @@ export const useLocalStorage = (key, initialValue = null) => {
   useEffect(() => {
     const handleStorageChange = (event) => {
       if (event.key === key) {
-        setValue(event.newValue || initialValue);
+        if (event.newValue === null) {
+          setValue(null);
+          console.log(
+            `Key "${key}" was removed from localStorage in another tab`
+          );
+        } else {
+          setValue(event.newValue);
+          console.log(
+            `Storage event for key "${key}": new value = ${event.newValue}`
+          );
+        }
       }
     };
 
@@ -40,7 +50,7 @@ export const useLocalStorage = (key, initialValue = null) => {
     return () => {
       window.removeEventListener("storage", handleStorageChange);
     };
-  }, [key, initialValue]);
+  }, [key]);
 
   return { value, set, get };
 };
