@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom";
 
 import BaseLayout from "../Layout/BaseLayout";
 import { Paths } from "./path";
-import GoogleSignUp from "../Features/GoogleSignUp";
+import Dashboard from "../Features/GoogleCalender/Dashboard";
 
 const Login = lazy(() => import("../Features/SignIn/Login"));
 
@@ -13,7 +13,7 @@ const AppRoutes = () => {
       <BaseLayout>
         <Routes>
           <Route path={Paths.HOME} element={<Login />} />
-          <Route path={Paths.LOGIN} element={<GoogleSignUp />} />
+          <Route path={Paths.DASHBOARD} element={<Dashboard />} />
         </Routes>
       </BaseLayout>
     </div>

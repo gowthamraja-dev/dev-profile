@@ -7,7 +7,7 @@ const App = () => {
   useEffect(() => {
     checkUser();
   }, []);
-  console.log("App component rendered", process.env.PUBLIC_URL);
+  console.log("App component rendered", process.env.REACT_APP_ENV);
   return (
     <HashRouter>
       <AppRoutes />

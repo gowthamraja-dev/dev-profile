@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { BASE_URL } from "../../api/baseUrl";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [isLoading, setIsLoading] = useState(false);
+  const navigate = useNavigate();
 
   const handleGoogleLogin = async () => {
-    window.location.href = "#/login";
+    navigate("/login");
     // setIsLoading(true);
     // try {
     //   const response = await fetch(`${BASE_URL}/login/google`, {
