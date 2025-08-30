@@ -1,24 +1,27 @@
-import React, { useEffect } from "react";
-import { HashRouter } from "react-router-dom";
-import AppRoutes from "./Routes/AppRoutes";
-import { checkUser } from "./app/auth";
-import { useLocalStorage } from "./app/hooks";
+import Testimonials from "./sections/Testimonials";
+import Footer from "./sections/Footer";
+import Contact from "./sections/Contact";
+import TechStack from "./sections/TechStack";
+import Experience from "./sections/Experience";
+import Hero from "./sections/Hero";
+import ShowcaseSection from "./sections/ShowcaseSection";
+import LogoShowcase from "./sections/LogoShowcase";
+import FeatureCards from "./sections/FeatureCards";
+import Navbar from "./components/NavBar";
 
-const App = () => {
-  const queryParams = new URLSearchParams(window.location.search);
-  const queryUserId = queryParams.get("userId");
-  const { get: getUserId } = useLocalStorage("userId", queryUserId);
-  const userId = getUserId();
-
-  useEffect(() => {
-    checkUser(userId);
-  }, [userId]);
-
-  return (
-    <HashRouter>
-      <AppRoutes />
-    </HashRouter>
-  );
-};
+const App = () => (
+  <>
+    <Navbar />
+    <Hero />
+    <ShowcaseSection />
+    <LogoShowcase />
+    <FeatureCards />
+    <Experience />
+    <TechStack />
+    <Testimonials />
+    <Contact />
+    <Footer />
+  </>
+);
 
 export default App;
